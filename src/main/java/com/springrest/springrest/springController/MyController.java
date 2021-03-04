@@ -38,10 +38,7 @@ public class MyController {
 
         return this.courseService.addCourse(course);
     }
-    @PostMapping("/courses")
-    public Course updateCourse(@RequestBody Course course){
-        return this.courseService.updateCourse(course);
-    }
+
     @DeleteMapping("/courses/{courseId}")
     public ResponseEntity<HttpStatus> deleteCourse(@PathVariable String courseId){
         try {
